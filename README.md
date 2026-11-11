@@ -1,5 +1,7 @@
 # Afinidade — O Outro Lado
 
+**Versão oficial:** 1.0.0 (estável).
+
 Site independente de fãs inspirado no universo de **Ordem Paranormal**, criado para funcionar em celulares e computadores sem instalar aplicativo.
 
 **Site:** https://afinidade-outro-lado.pages.dev
@@ -20,7 +22,7 @@ A leitura dos elementos e do match é temática, não científica. Os textos, as
 
 O projeto do usuário está no repositório público [MPandu1/Afinidade-Outro-Lado-](https://github.com/MPandu1/Afinidade-Outro-Lado-). Basta atualizar os arquivos na branch `main` para que o Cloudflare Pages publique uma versão nova automaticamente. O `index.html` deve continuar na raiz.
 
-Pelo Android com Termux, pode-se usar o script distribuído separadamente, **Publicar_Afinidade_v1_2_Android.sh**, após baixar o ZIP para a pasta Downloads e autenticar o GitHub CLI com a conta certa.
+Pelo Android com Termux, pode-se usar o script distribuído separadamente, script de publicação para a versão 1.0.0 (disponibilizado separadamente, quando solicitado), após baixar o ZIP para a pasta Downloads e autenticar o GitHub CLI com a conta certa.
 
 ## Testar localmente
 
@@ -46,7 +48,3 @@ node --test
 - `tests/`: verificações automatizadas de funcionamento.
 - `.github/workflows/pages.yml`: publicação alternativa via GitHub Pages.
 - `PLANO_DO_PROJETO.md`: decisões e limitações para continuidade técnica.
-
-## Direitos e atribuição
-
-Ordem Paranormal e suas denominações pertencem aos respectivos titulares. Projeto de fã independente, sem vínculo oficial. Não reproduz perguntas integrais de outros testes nem arte oficial do universo.

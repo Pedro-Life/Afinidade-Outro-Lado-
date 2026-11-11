@@ -1,6 +1,6 @@
 # PROJETO AFINIDADE — Documento de continuidade
 
-**Versão:** 1.2 (compartilhamento e personalização, 11/11/2026)  
+**Versão:** 1.0.0 (primeira versão estável, 11/11/2026)  
 **Status:** website completo para publicação estática; calibração empírica ainda pendente.
 
 ## Objetivo
@@ -56,7 +56,7 @@ Construir um teste independente de afinidade narrativa com Sangue, Morte, Conhec
 - diferenciação das perguntas 10, 20, 30, 40 e 50;
 - rejeição de respostas ausentes.
 
-Os testes da versão 1.2 passaram em Node.js (16 casos), cobrindo pontuação, 12 combinações, preferências de tratamento, empates e geração lógica do Canvas. A navegação real do navegador Chromium foi bloqueada por política do ambiente, portanto o visual e o compartilhamento precisam de conferência manual no navegador Android antes de anunciar a versão como completamente testada.
+Os testes da primeira versão estável passaram em Node.js (os casos estão no diretório `tests/`), cobrindo pontuação, 12 combinações, preferências de tratamento, empates e geração lógica do Canvas. A navegação real do navegador Chromium foi bloqueada por política do ambiente, portanto o visual e o compartilhamento precisam de conferência manual no navegador Android antes de anunciar a versão como completamente testada.
 
 ## Próximos passos
 1. Testar uso real em celular depois de publicar no GitHub Pages.
