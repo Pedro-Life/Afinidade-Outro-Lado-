@@ -1,6 +1,6 @@
 # PROJETO AFINIDADE — Documento de continuidade
 
-**Versão:** 1.2 (compartilhamento e personalização, 11/11/2026)  
+**Versão:** 1.1 (correções de interface e escala, 10/11/2026)  
 **Status:** website completo para publicação estática; calibração empírica ainda pendente.
 
 ## Objetivo
@@ -14,21 +14,16 @@ Construir um teste independente de afinidade narrativa com Sangue, Morte, Conhec
 - Capturas e gravações enviadas durante o planejamento, usadas como referência de apresentação e fluxo, sem copiar artes ou perguntas integrais.
 
 ## Decisões de produto
-1. Website estático publicado no Cloudflare Pages (`https://afinidade-outro-lado.pages.dev`) com atualização automática via GitHub `MPandu1/Afinidade-Outro-Lado-`; público acessa pelo navegador.
+1. Website estático publicado pelo GitHub Pages; público acessa o link pelo navegador, sem download.
 2. Modo breve com 24 perguntas e modo profundo com 56.
 3. Cada pergunta apresenta sete alternativas fixas e ordenadas: concordo completamente, concordo, concordo parcialmente, neutro, discordo parcialmente, discordo e discordo completamente.
 4. Valores brutos: +2, +1, +0,5, 0, −0,5, −1, −2. Questões em posições múltiplas de dez têm peso 2; todas as demais têm peso 1. Normalização por elemento leva em conta a soma dos pesos das próprias questões, com 0=50% e extremos −2=0%, +2=100%.
 5. Todos os elementos possuem uma pontuação independente de 0 a 100, sem casas decimais e sem exigência de somar 100%.
 6. Resultado apresenta o elemento predominante, uma faceta específica e as porcentagens dos quatro elementos. Empates precisam ser identificados, não mascarados por desempate arbitrário na interface.
 7. Experiência visual: interface de pergunta minimalista; resultado cerimonial com fundo escuro ornamentado, sigilo vetorial autoral, título grande, painel de descrição e espectro.
-8. Campos opcionais de nome e forma de tratamento (Ele, Ela, Neutro, Prefiro não dizer); a última opção não gera pronome atribuído. Nenhum campo altera a pontuação.
-9. Arquétipos compostos autorais para as 12 combinações ordenadas dos dois elementos dominantes. A leitura da Sombra do elemento menor é deliberadamente bem-humorada, não constitui julgamento pessoal.
-10. Match narrativo e fictício, usando o elemento mais forte e o mais fraco como contraste; não se apresenta como compatibilidade real.
-11. Cartão vertical PNG 1080×1920 feito com Canvas, sem dependências externas de exportação e com prévia e download.
-12. Arte de compartilhamento para o link (Open Graph); nenhuma coleta ou transmissão remota de nomes, respostas ou resultados.
-13. Não expor os pesos ou parâmetros de cálculo na interface do teste nem no README voltado à publicação.
-14. Todas as artes vetoriais deste projeto são originais e não reproduzem os símbolos oficiais diretamente.
-15. Tudo deve funcionar sem dependência de servidor, API, banco de dados ou conta de usuário.
+8. Não expor os pesos ou parâmetros de cálculo na interface do teste nem no README voltado à publicação.
+9. Todas as artes vetoriais deste projeto são originais e não reproduzem os símbolos oficiais diretamente.
+10. Tudo deve funcionar sem dependência de servidor, API, banco de dados ou conta de usuário.
 
 ## Interpretação atual dos elementos
 - Conhecimento: investigação, compreensão, interpretação.
@@ -56,7 +51,7 @@ Construir um teste independente de afinidade narrativa com Sangue, Morte, Conhec
 - diferenciação das perguntas 10, 20, 30, 40 e 50;
 - rejeição de respostas ausentes.
 
-Os testes da versão 1.2 passaram em Node.js (16 casos), cobrindo pontuação, 12 combinações, preferências de tratamento, empates e geração lógica do Canvas. A navegação real do navegador Chromium foi bloqueada por política do ambiente, portanto o visual e o compartilhamento precisam de conferência manual no navegador Android antes de anunciar a versão como completamente testada.
+Testes da versão 1.1 passaram em Node.js (9 casos) e foram complementados por simulação de interface em Chromium com tela de celular 412×915. Foram exercitados os fluxos de 24 e 56 perguntas, sete alternativas, textos revisados e porcentagens inteiras no resultado. O navegador do ambiente bloqueia navegação local direta; por isso os testes visuais foram executados com os mesmos conteúdos HTML/CSS/JS injetados na página. O endereço publicado no GitHub Pages ainda precisa de validação no celular.
 
 ## Próximos passos
 1. Testar uso real em celular depois de publicar no GitHub Pages.
@@ -65,7 +60,7 @@ Os testes da versão 1.2 passaram em Node.js (16 casos), cobrindo pontuação, 1
 4. Avaliar empiricamente vieses de aquiescência e desejabilidade social, além do impacto dos pesos de questões especiais.
 5. Validar subfacetas e reduzir ambiguidades com usuários e fãs experientes.
 6. Incluir situações de escolha contextual, preservando as sete opções por pergunta definidas para esta versão.
-7. Testar acessibilidade e exportação de imagens em dispositivos Android reais.
+7. Acrescentar opção de exportar imagem do resultado, sem alterar o visual principal.
 
 ## Publicação
-Atualizar os arquivos na raiz da branch `main` do repositório `MPandu1/Afinidade-Outro-Lado-`; a hospedagem principal é Cloudflare Pages com deploy automático. O ZIP sozinho não é interpretado como página; seu conteúdo precisa ser enviado ao repositório.
+Subir todos os arquivos para a raiz do repositório, confirmar o workflow de Pages, habilitar GitHub Actions em Settings → Pages, enviar o link final. O ZIP sozinho não é interpretado como página pelo GitHub Pages; os arquivos precisam ser extraídos e enviados ao repositório.
